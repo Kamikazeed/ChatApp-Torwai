@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import assets from '../assets/assets'
+import { assets } from '../assets/assets'
 import { useChatContext } from '../context/ChatContext'
 import { useAuthContext } from '../context/AuthContext';
 

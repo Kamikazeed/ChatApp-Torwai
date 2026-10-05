@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import assets from '../assets/assets'
+import { assets } from '../assets/assets'
 import { useAuthContext } from '../context/AuthContext'
 import { useChatContext } from '../context/ChatContext'
 
@@ -22,7 +22,7 @@ const Sidebar = () => {
         <div className='flex justify-between items-center'>
           <img className='max-w-40' src={assets.logo} />
           <div className='relative py-2 group'>
-            <img className='max-h-5 cursor-pointer' src={assets.menu_icon} />
+            <img className='w-4 h-4 cursor-pointer' src={assets.menu_icon} />
             <div className='absolute top-full right-0 z-20 w-32 p-5 rounded-md bg-[#282142] border-gray-600 text-gray-100 hidden group-hover:block '>
               <p className='cursor-pointer text-sm' onClick={() => navigate('/profile')}>Edit Profile</p>
               <hr className='my-2 border-t border-gray-500' />

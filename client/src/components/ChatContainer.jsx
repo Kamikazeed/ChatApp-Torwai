@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import assets from '../assets/assets'
+import { assets } from '../assets/assets'
 import { formatMessageTime } from '../library/utils';
 import { useChatContext } from '../context/ChatContext';
 import { useAuthContext } from '../context/AuthContext';
@@ -58,8 +58,8 @@ const ChatContainer = () => {
           }
         </p>
 
-        <img className='max-w-7 md:hidden' onClick={() => setSelectedUser(null)} src={assets.arrow_icon} />
-        <img className='max-md:hidden max-w-5' src={assets.help_icon} />
+        <img className='w-6 h-6 md:hidden cursor-pointer' onClick={() => setSelectedUser(null)} src={assets.arrow_icon} />
+        <img className='max-md:hidden w-5 h-5' src={assets.help_icon} />
       </div>
 
       {/* Chat area */}
