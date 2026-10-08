@@ -5,6 +5,7 @@ import { useChatContext } from '../context/ChatContext'
 
 const Sidebar = () => {
   
+  const [isMenuOpen , setIsMenuOpen] = useState(false)
   const {getUsers, users, selectedUser, setSelectedUser, unseenMessages, setUnseenMessages} = useChatContext();
   const {logout, navigate, onlineUsers} = useAuthContext();
 
@@ -22,8 +23,8 @@ const Sidebar = () => {
         <div className='flex justify-between items-center'>
           <img className='max-w-40' src={assets.logo} />
           <div className='relative py-2 group'>
-            <img className='w-4 h-4 cursor-pointer' src={assets.menu_icon} />
-            <div className='absolute top-full right-0 z-20 w-32 p-5 rounded-md bg-[#282142] border-gray-600 text-gray-100 hidden group-hover:block '>
+            <img className='w-4 h-4 cursor-pointer' src={assets.menu_icon} onClick={() => setIsMenuOpen(prev => !prev)}/>
+            <div className={`${isMenuOpen === true ? 'block' : 'hidden'} absolute top-full right-0 z-20 w-32 p-5 rounded-md bg-[#282142] border-gray-600 text-gray-100`}>
               <p className='cursor-pointer text-sm' onClick={() => navigate('/profile')}>Edit Profile</p>
               <hr className='my-2 border-t border-gray-500' />
               <p className='cursor-pointer text-sm' onClick={() => logout()}>Logout</p>
