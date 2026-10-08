@@ -46,10 +46,10 @@ const Login = () => {
           {!isDataSubmitted && (
             <>
               <input className='p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500' 
-              type="email" placeholder='Email Address' required 
+              type="email" placeholder='Email Address' autoComplete='username' required 
               value={email} onChange={(e) => setEmail(e.target.value)} />
               <input className='p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500' 
-              type="password" placeholder='Password' required 
+              type="password" placeholder='Password' autoComplete='current-password' required 
               value={password} onChange={(e) => setPassword(e.target.value)} />
             </>
           )}
